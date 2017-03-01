@@ -6,10 +6,6 @@ import scala.concurrent.Future
 import de.heikoseeberger.akkahttpcirce.CirceSupport._
 
 object Main {
-
-  implicit val intMarshaller: ToResponseMarshaller[Int] =
-      Marshaller.stringMarshaller(MediaTypes.`text/plain`).compose((_: Int).toString)
-
   type A = FieldType[W.`'int`.T, Future[Int]] :+: CNil
   type B = FieldType[W.`'int`.T, Int] :+: CNil
 
