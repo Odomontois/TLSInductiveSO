@@ -11,7 +11,5 @@ object Main {
 
   val instance = TypeClass[A, B]
 
-  def main(args: Array[String]){
-      println(instance.route(null))
-      }
+  def main(args: Array[String]): Unit = println(instance.route(null)) 
 }
